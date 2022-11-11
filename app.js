@@ -1,19 +1,16 @@
-function palindrome(str) {
-    var newStr = str.toLowerCase();
-    var match;
+let palindrome = (str) => {
     const regExp = new RegExp('[A-Za-z0-9]', 'g');
-    match = newStr.match(regExp);
-
-    var reverseArr = [];
+    let match = str.toLowerCase().match(regExp);
+    let reverseArr = [];
 
     for (let i = match.length - 1; i >= 0; i--) {
         reverseArr.push(match[i]);
     }
 
     if (reverseArr.toString() == match.toString()) {
-        return true;
+        return true
     } else {
-        return false;
+        return false
     }
 }
 
